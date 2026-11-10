@@ -1,0 +1,188 @@
+MANUAL DE USUÁRIO
+Sistema de Gestão da Biblioteca Municipal de Camocim
+
+1. Apresentação:
+O Sistema de Gestão da Biblioteca Municipal de Camocim foi desenvolvido com o objetivo de auxiliar na organização e no gerenciamento das atividades da biblioteca.
+O sistema permite realizar o cadastro de livros e leitores, consultar informações do acervo, registrar empréstimos e controlar a devolução de livros.
+Este manual apresenta as orientações necessárias para utilizar corretamente as funcionalidades disponíveis, desde a inicialização do programa até seu encerramento.
+
+2. Arquivos necessários para o funcionamento:
+
+Para que o sistema funcione corretamente, é necessário manter a seguinte estrutura de arquivos:
+
+- Biblioteca.py: arquivo principal responsável pela execução do sistema.
+- Pasta Tabelas: diretório onde ficam armazenadas as planilhas utilizadas pelo programa.
+
+A pasta Tabelas deve conter os seguintes arquivos:
+
+- Cadastro de Livros.xlsx: armazena as informações dos livros cadastrados.
+- Cadastro de Leitores.xlsx: armazena os dados dos leitores.
+- Controle de Emprestimo.xlsx: registra as operações de empréstimo e devolução.
+
+Importante: os nomes dos arquivos e das pastas devem ser mantidos exatamente como estão configurados no programa. Não mova nem renomeie esses arquivos.
+
+3. Inicialização do sistema:
+
+Para iniciar a utilização do sistema, siga as instruções:
+
+1. Abra o Visual Studio Code.
+2. Abra a pasta do projeto.
+3. Localize e abra o arquivo Biblioteca.py.
+4. Execute o programa utilizando o ambiente Python do Visual Studio Code.
+5. Aguarde a apresentação do menu principal no terminal. Após a inicialização, o sistema estará disponível para utilização.
+
+4. Menu principal
+O menu principal apresenta as funcionalidades disponíveis no sistema. Para acessar qualquer operação, basta digitar o número correspondente e pressionar Enter.
+
+As opções disponíveis são:
+
+1 – Cadastro de Livros
+
+Permite registrar novos livros no acervo da biblioteca.
+Orientamos que o titulo do Livro seja digitado em LETRAS MAIUSCULA E SEM ACENTO
+
+2 – Busca de Livros
+
+Permite localizar um livro específico por meio de seu título.
+Orientamos que o titulo do Livro seja digitado em LETRAS MAIUSCULA E SEM ACENTO, conforme foi cadastrado.
+
+
+3 – Verificação de Acervo
+
+Apresenta os livros cadastrados e suas respectivas informações.
+
+4 – Empréstimos
+
+Permite registrar o empréstimo de livros para leitores cadastrados.
+
+5 – Devolução
+
+Permite registrar a devolução de livros emprestados.
+
+6 – Cadastro de Leitores
+
+Permite registrar os dados das pessoas que utilizarão os serviços da biblioteca.
+
+7 – Sair
+
+Encerra a execução do sistema.
+
+Após a conclusão de cada operação, o sistema retorna ao menu principal, permitindo selecionar uma nova funcionalidade.
+
+5. Cadastro de livros
+Esta funcionalidade permite incluir novos livros no acervo da biblioteca.
+
+Para realizar um cadastro:
+
+1. No menu principal, digite 1 e pressione Enter.
+2. Preencha os campos apresentados na tela com as informações solicitadas.
+3. Informe os dados bibliográficos e administrativos da obra.
+4. Após o preenchimento, o sistema registra as informações na planilha Cadastro de Livros.xlsx.
+Entre as informações solicitadas estão:
+- Título e subtítulo.
+- Autores e editora.
+- Edição e ano de publicação.
+- Local de publicação.
+- ISBN e código de barras.
+- Número de páginas e idioma.
+- Data e forma de obtenção.
+- Valor da obra e número de exemplares.
+- Condição do exemplar.
+- Assuntos, gênero e categoria.
+- Sinopse.
+- Status do item e histórico de empréstimos.
+
+É importante preencher corretamente os campos para manter a organização e a qualidade das informações do acervo.
+
+6. Busca de livros
+Esta funcionalidade permite consultar individualmente os livros registrados no sistema.
+
+Para realizar uma busca:
+
+1. No menu principal, digite 2 e pressione Enter.
+2. Quando solicitado, informe o título do livro que deseja localizar.
+3. O sistema realizará a pesquisa no cadastro de livros.
+4. Quando o título for encontrado, serão apresentadas as informações correspondentes ao registro.
+A busca facilita a localização de obras e permite consultar suas informações, inclusive a situação de disponibilidade.
+7. Verificação do acervo
+Esta opção permite visualizar os livros cadastrados na biblioteca.
+
+Para consultar o acervo:
+
+1. No menu principal, digite 3 e pressione Enter.
+2. Aguarde o processamento das informações.
+3. O sistema apresentará os registros existentes na planilha de cadastro de livros.
+Essa funcionalidade permite acompanhar a composição do acervo e consultar as informações dos exemplares cadastrados.
+8. Cadastro de leitores
+Esta funcionalidade permite registrar os dados das pessoas que utilizarão os serviços da biblioteca.
+
+Para realizar um cadastro de Leitor:
+
+1. No menu principal, digite 6 e pressione Enter.
+
+2. Preencha os campos solicitados:
+
+   - CPF;
+   - Nome;
+   - Endereço;
+   - Bairro;
+   - Cidade;
+   - Celular.
+
+3. Após o preenchimento, os dados serão registrados na planilha Cadastro de Leitores.xlsx.
+
+O CPF é utilizado como identificador do leitor nas operações de empréstimo e devolução. Portanto, é importante informar corretamente esse dado.
+
+9. Empréstimo de livros
+
+Esta funcionalidade permite registrar o empréstimo de um livros por leitores cadastrados.
+
+Para realizar um empréstimo:
+
+1. No menu principal, digite 4 e pressione Enter.
+2. Informe o CPF do leitor.
+3. Após a identificação do cadastro, informe o celular solicitado pelo sistema.
+4. Digite o título do livro desejado.
+5. O sistema verificará se o leitor está cadastrado e se o livro está disponível para empréstimo.
+6. Estando as condições atendidas, o empréstimo será registrado.
+
+As informações serão armazenadas na planilha Controle de Emprestimo.xlsx, incluindo os dados do leitor, o título do livro, a data de retirada e a previsão de devolução. A data de previsão da devolução e calculada automaticamente pelo sistema, adicionando a data atual + 31 dias.
+Após o registro, a situação do livro será atualizada no cadastro de livros, passando a constar como Indisponível.
+A planilha de Empréstimo foi formatada para ser exportada e identificada a situação onde os empréstimos estão atrasado. Para isso salve uma copia e adicione a data atual, após ser inserida a coluna seguinte será preenchida automaticamente com os status do empréstimo. "Em andamento", "Concluído", "Devolvido com Atraso" e "Atrasado". Podendo ser filtrado os atrasos e devidamente cobrados.
+
+10. Devolução de livros
+Esta funcionalidade permite registrar o retorno dos livros emprestados à biblioteca.
+
+Para realizar uma devolução:
+
+1. No menu principal, digite 5 e pressione Enter.
+2. Informe o CPF do leitor.
+3. Informe os dados solicitados pelo sistema para identificar o empréstimo.
+4. O sistema localizará o registro correspondente.
+5. Após a identificação, a devolução será registrada no controle de empréstimos.
+6. A situação do livro será atualizada no cadastro de livros, passando a constar como Disponível.
+O procedimento permite manter atualizado o controle de empréstimos e a disponibilidade dos livros no acervo.
+
+11. Encerramento do sistema
+Para finalizar a utilização:
+
+1. Retorne ao menu principal.
+2. Digite 7 e pressione Enter.
+3. Aguarde o encerramento do programa.
+
+Após o encerramento, o usuário poderá fechar o Visual Studio Code.
+
+12. Recomendações importantes
+Para garantir o funcionamento adequado do sistema, observe as seguintes recomendações:
+- Mantenha os arquivos Excel dentro da pasta Tabelas.
+- Não altere os nomes dos arquivos utilizados pelo programa.
+- Evite modificar os cabeçalhos, as colunas e a estrutura das planilhas.
+- Feche os arquivos Excel antes de executar operações que atualizem os dados.
+- Informe corretamente o CPF dos leitores e os títulos dos livros.
+- Realize cópias de segurança periódicas das planilhas para preservar os registros.
+
+13. Considerações finais
+O Sistema de Gestão da Biblioteca Municipal de Camocim foi desenvolvido para facilitar o gerenciamento das principais atividades de uma biblioteca, proporcionando maior organização dos cadastros, consultas e movimentações do acervo.
+
+A utilização correta das funcionalidades apresentadas neste manual contribui para manter as informações atualizadas e garantir o controle dos livros e leitores cadastrados. 
+
