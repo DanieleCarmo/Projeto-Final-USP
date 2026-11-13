@@ -218,36 +218,36 @@ if opcao == "2":
 def verificacao_arcevo():
     import pandas as pd
     cadastrolivros = pd.read_excel('Tabelas/Cadastro de Livros.xlsx')
-    print("=" * 175)
+    print("=" * 120)
     print("                                         ARCEVO DE LIVROS CADASTRADOS NA BIBLIOTECA MUNICIPAL DE CAMOCIM")
-    print("=" * 175)
+    print("=" * 120)
     print()
     
-    # PRIMEIRA TABELA - 6 COLUNAS
-    print("-" * 175)
-    print(cadastrolivros.iloc[:, 1:7].to_string(index=False, justify='rihght', col_space=28)) 
-    print("-" * 175)
+    # PRIMEIRA TABELA - 5 COLUNAS
+    print("-" * 120)
+    print(cadastrolivros.iloc[:, 1:6].to_string(index=False, justify='rihght', col_space=40)) 
+    print("-" * 120)
 
     # SEGUNDA TABELA - 5 COLUNAS
     print()
-    print("-" * 175)
-    print(cadastrolivros.iloc[:, 7:12].to_string(index=False, justify='rihght', col_space=28))
-    print("-"* 175)
+    print("-" * 120)
+    print(cadastrolivros.iloc[:, 6:12].to_string(index=False, justify='rihght', col_space=40))
+    print("-"* 120)
 
-    #TERCEIRA TABELA - 6 COLUNAS
+    #TERCEIRA TABELA - 5 COLUNAS
     print()
-    print("-"* 175)
-    print(cadastrolivros.iloc[:,12:18].to_string(index=False, justify='rihght', col_space=28))
-    print("-" * 175)
+    print("-"* 120)
+    print(cadastrolivros.iloc[:,12:18].to_string(index=False, justify='rihght', col_space=40))
+    print("-" * 120)
     
-    #QUARTA  TABELA - 6 COLUNAS
+    #QUARTA  TABELA - 5 COLUNAS
     print()
-    print(cadastrolivros.iloc[:, 18:23].to_string(index=False, justify='rihght', col_space=30))
-    print("=" * 175)
+    print(cadastrolivros.iloc[:, 18:23].to_string(index=False, justify='rihght', col_space=40))
+    print("=" * 120)
     print()
-    print("=" * 175)
+    print("=" * 120)
     print('                                                  Lista do arcevo foi impressa')
-    print("=" * 175)
+    print("=" * 120)
     print()
     
 
